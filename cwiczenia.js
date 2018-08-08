@@ -17,8 +17,16 @@ multiply(4, 8);
 
 // ZADANIE TRZECIE
 
-const average = (...args) => (args.reduce((acc,current) => acc + current))/args.length;
-console.log(average(1,2,3,));
+const average = (...args) => {
+  let total=0, average;
+  args.forEach(arg => {
+    total += arg;
+  })
+  average = total / args.length;
+  return average;
+};
+
+average(2, 3, 5, 7);
 
 // ZADANIE CZWARTE
 
@@ -27,7 +35,7 @@ var srednia = [1, 5, 5, 5, 4, 3, 3, 2, 1];
 var first = srednia[0],
     second = srednia[1],
     third = srednia[2],
-    fourth = srednia3],
+    fourth = srednia[3],
     fith = srednia[4],
     sixth = srednia[5],
     seventh = srednia[6],
